@@ -28,7 +28,7 @@ $secondary-color: #814abb;
 
     &__icon {
         font-size: 2.5rem;
-        color: $primary-color;
+        color: $secondary-color;
     }
 
     &__links {
@@ -40,12 +40,12 @@ $secondary-color: #814abb;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    color: #ffffff;
 
     &__title {
         text-transform: uppercase;
         width: 100%;
         text-align: center;
+        font-size: 3rem;
     }
 }
 
@@ -56,6 +56,7 @@ $secondary-color: #814abb;
     padding: 1rem 0.5rem;
     width: 100%;
     flex-direction: column;
+    color: #ffffff;
 
 
     &__autotype {
@@ -74,7 +75,6 @@ $secondary-color: #814abb;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     &__photo {
@@ -82,4 +82,65 @@ $secondary-color: #814abb;
         border-radius: 50%;
         width: 10rem;
     }
+}
+
+.about {
+    color: $secondary-color;
+
+    &__title {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    &__links {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__link {
+        font-size: 3rem;
+        cursor: pointer;
+    }
+}
+
+.offer {
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color;
+    color: #fff;
+
+    &__item {
+        max-width: 80%;
+        padding: 1rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    &__photo {
+        max-width: 100%;
+        border-radius: 10%;
+    }
+}
+
+.gallery {
+    background-color: $primary-color;
+    color: #fff;
+}
+
+.contact {}
+
+hr {
+    width: 100%;
+    border-top: 1px solid #fff;
 }
