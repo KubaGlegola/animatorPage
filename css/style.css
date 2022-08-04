@@ -60,7 +60,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #f2a8e1;
+  background: #f2a8e1;
+  background: -webkit-gradient(linear, left top, right top, from(#f2a8e1), color-stop(55%, #c2b5d2), to(#8fc6fd));
+  background: linear-gradient(90deg, #f2a8e1 0%, #c2b5d2 55%, #8fc6fd 100%);
   padding: 1rem 0.5rem;
   width: 100%;
   -webkit-box-orient: vertical;
@@ -128,12 +130,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f2a8e1;
+  background: #f2a8e1;
+  background: -webkit-gradient(linear, left top, right top, from(#f2a8e1), color-stop(55%, #c2b5d2), to(#8fc6fd));
+  background: linear-gradient(90deg, #f2a8e1 0%, #c2b5d2 55%, #8fc6fd 100%);
   color: #fff;
 }
 .offer__item {
   max-width: 80%;
   padding: 1rem;
+}
+.offer__item:not(:last-child) {
+  border-bottom: 2px solid #fff;
 }
 .offer__title {
   text-transform: uppercase;
@@ -147,11 +154,63 @@
 }
 
 .gallery {
-  background-color: #f2a8e1;
+  padding: 1rem 1rem 0 1rem;
+  background: #f2a8e1;
+  background: -webkit-gradient(linear, left top, right top, from(#f2a8e1), color-stop(55%, #c2b5d2), to(#8fc6fd));
+  background: linear-gradient(90deg, #f2a8e1 0%, #c2b5d2 55%, #8fc6fd 100%);
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallery__box {
+  width: 100%;
+}
+.gallery__item {
+  width: 100%;
+  border-radius: 5%;
+}
+.gallery__arrow {
+  position: relative;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  top: 50%;
+}
+.gallery__arrow--left {
+  margin-left: 1rem;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.gallery__arrow--right {
+  margin-right: 1rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.gallery__dots {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+.gallery__dot {
+  margin: 0 1rem;
+  border-radius: 100%;
+  padding: 8px;
+  background-color: #fff;
+}
+.gallery__dot--active {
+  background-color: #814abb;
 }
 
-hr {
-  width: 100%;
-  border-top: 1px solid #fff;
+.price {
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */

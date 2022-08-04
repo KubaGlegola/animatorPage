@@ -1,5 +1,10 @@
 $primary-color: #f2a8e1;
 $secondary-color: #814abb;
+$secondary-gradient-color: #8fc6fd;
+$accent-color: #c2b5d2;
+
+$gradient: linear-gradient(90deg, $primary-color 0%, $accent-color 55%, $secondary-gradient-color 100%);
+
 
 
 * {
@@ -52,7 +57,8 @@ $secondary-color: #814abb;
 .header {
     display: flex;
     flex-wrap: wrap;
-    background-color: $primary-color;
+    background: $primary-color;
+    background: $gradient;
     padding: 1rem 0.5rem;
     width: 100%;
     flex-direction: column;
@@ -112,12 +118,19 @@ $secondary-color: #814abb;
 .offer {
     display: flex;
     justify-content: center;
-    background-color: $primary-color;
+    background: $primary-color;
+    background: $gradient;
+
     color: #fff;
 
     &__item {
         max-width: 80%;
         padding: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid #fff;
+        }
+
     }
 
     &__title {
@@ -134,13 +147,64 @@ $secondary-color: #814abb;
 }
 
 .gallery {
-    background-color: $primary-color;
+    padding: 1rem 1rem 0 1rem;
+    background: $primary-color;
+    background: $gradient;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    &__box {
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    &__arrow {
+        position: relative;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        top: 50%;
+
+
+        &--left {
+            margin-left: 1rem;
+            transform: rotate(135deg);
+        }
+
+        &--right {
+            margin-right: 1rem;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__dots {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+
+    }
+
+    &__dot {
+        margin: 0 1rem;
+        border-radius: 100%;
+        padding: 8px;
+        background-color: #fff;
+
+        &--active {
+            background-color: #814abb;
+        }
+    }
+}
+
+.price {
+    padding: 1rem;
 }
 
 .contact {}
-
-hr {
-    width: 100%;
-    border-top: 1px solid #fff;
-}
