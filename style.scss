@@ -117,26 +117,31 @@ $gradient: linear-gradient(90deg, $primary-color 0%, $accent-color 55%, $seconda
 
 .offer {
     display: flex;
+    width: 100%;
     justify-content: center;
+
+    &__scroll {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        gap: 1rem;
+    }
+
     background: $primary-color;
     background: $gradient;
 
     color: #fff;
 
     &__item {
-        max-width: 80%;
-        padding: 1rem;
-
-        &:not(:last-child) {
-            border-bottom: 2px solid #fff;
-        }
-
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        padding: 0 2rem;
     }
 
     &__title {
         text-transform: uppercase;
         text-align: center;
-        padding: 0.5rem;
         font-size: 1.8rem;
     }
 
@@ -169,7 +174,7 @@ $gradient: linear-gradient(90deg, $primary-color 0%, $accent-color 55%, $seconda
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 10px;
-        top: 50%;
+        top: 45%;
 
 
         &--left {
